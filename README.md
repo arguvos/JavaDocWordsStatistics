@@ -13,7 +13,7 @@ How the utility works:
 
 The file java8words.txt provides statistics for the words used for the Java 8 documentation.
 ## Dependencies
-JavaDocWordsStatistics service uses:
+JavaDocWordsStatistics uses:
 - java 11
 - maven
 - picocli
