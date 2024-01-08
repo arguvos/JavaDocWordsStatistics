@@ -66,6 +66,19 @@ public class StatisticsCollector {
                 .map(e -> e.childNodes().get(0).attributes().get("href")).toList();
     }
 
+    /**
+     * The method uses depth-first search to traverse the entire page tree and collect all the words.
+     * Algorithm:
+     * 1 Each found line undergoes preprocessing:
+     *   - foam marks are cleared
+     *   - special characters are removed
+     * 2 The line is divided into words by spaces
+     * 3 Words are filtered
+     * 4 Converting all words to lower case
+     * 5 Saving words into a structure with statistical information
+     * @param wordToStatMap map for storing statistics: word - number of occurrences
+     * @param nodes nodes
+     */
     //DFS
     private static void collectWords(Map<String, Integer> wordToStatMap, List<Node> nodes) {
         for (Node node : nodes) {
